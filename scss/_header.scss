@@ -1,0 +1,121 @@
+nav.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 60px;
+  max-width: 100vw;
+  @include pad {
+    height: 50px;
+    padding: 0 16px;
+  }
+  .header-wrapper {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include pad {
+      max-width: 100vw;
+    }
+    a.logo {
+      img {
+        height: 30px;
+        @include pad {
+          height: 25px;
+        }
+      }
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      @include pad {
+        transition: 0.3s;
+        position: fixed;
+        z-index: 999;
+        top: 50px;
+        right: 200vw;
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+      }
+      a {
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 0.4px;
+        color: #757575;
+        margin: 0 12px;
+        @include pad {
+          font-size: 20px;
+          margin: 15px 0;
+        }
+      }
+    }
+    #menu-toggle {
+      display: none;
+      &:checked {
+        & ~ .nav-links {
+          right: 0;
+        }
+        & + label {
+          span {
+            transition: 0.3s;
+            &:nth-of-type(1) {
+              top: 13px;
+              transform: rotate(45deg);
+            }
+            &:nth-of-type(2) {
+              opacity: 0;
+            }
+            &:nth-of-type(3) {
+              top: 13px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+    label {
+      display: none;
+      position: relative;
+      @include pad {
+        display: block;
+        width: 30px;
+        height: 30px;
+        span {
+          display: inline-block;
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          background-color: #757575;
+          left: 0;
+          transition: 0.3s;
+          &:nth-of-type(1) {
+            top: 0;
+          }
+          &:nth-of-type(2) {
+            top: 13px;
+          }
+          &:nth-of-type(3) {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  padding-top: 60px;
+  overflow-x: hidden;
+  @include pad {
+    padding-top: 50px;
+  }
+}

@@ -1,0 +1,44 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title &#x5BCC;&#x8B58;&#x5CF6;&#x570B;&#x6A02;&#x9000;&#x5C0B;&#x79D8;&#xFF5C;&#x53F0;&#x5317;&#x5BCC;&#x90A6;&#x9280;&#x884C;
+  link(rel='shortcut icon', type='image/x-icon', href='favicon.ico')
+  meta(name='description', content='一座古代富識島國，藏有豐富的理財知識、精彩的退休寶藏，用心準備專業的投資理財情報，專人教你怎麼做退休規劃，讓你盡情探索心目中理想的退休生活。')
+  meta(property='og:type', content='website')
+  meta(property='og:locale', content='zh_TW')
+  meta(property='og:title', content='富識島國樂退尋秘｜台北富邦銀行')
+  meta(property='og:description', content='一座古代富識島國，藏有豐富的理財知識、精彩的退休寶藏，用心準備專業的投資理財情報，專人教你怎麼做退休規劃，讓你盡情探索心目中理想的退休生活。')
+  meta(property='og:image', content='')
+  // google font
+  link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap', rel='stylesheet')
+  // style
+  link(rel='stylesheet', href='./css/all.css')
+  // ga追蹤碼
+  script(src='./js/ga.js')
+// 導覽列
+nav.header
+  .header-wrapper
+    a.logo(href='index.html')
+      img(src='./img/nav-logo.png', alt='台北富邦銀行')
+    input#menu-toggle(type='checkbox')
+    label(for='menu-toggle')
+      span
+      span
+      span
+    .nav-links
+      a(href='./index.html') &#x9996;&#x9801;
+      a(href='./game.html') &#x5BCC;&#x8B58;&#x5CF6;&#x9810;&#x8A00;
+      a(href='./calc.html') &#x9B3C;&#x8C37;&#x5B50;&#x795E;&#x7B97;
+      a(href='./money.html') &#x6A02;&#x9000;&#x85CF;&#x7D93;&#x95A3;
+      a(href='./life.html') &#x516D;&#x85DD;&#x6587;&#x5316;&#x9928;
+      a(onclick="alert('敬請期待');") &#x9A5B;&#x7AD9;&#x4F48;&#x544A;
+      a(href='./form.html') &#x8207;&#x6211;&#x806F;&#x7E6B;
+// 下方區域
+section.main
+  .main-wrapper
+    include ./banner.pug
+// js
+script(src='./js/lib/jquery.min.js')
+script(src='./js/lib/gsap.min.js')
+script(src='./js/index.js')

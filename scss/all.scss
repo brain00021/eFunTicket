@@ -1,0 +1,32 @@
+@import "./reset";
+@import "./breakpoints";
+@import "./header";
+// layout
+.main {
+  background-color: #a21e00;
+  background-image: url(../img/money/bg-brick.png);
+  background-size: 3342px 2623px;
+  background-repeat: repeat;
+  background-position-x: center;
+  @include pad {
+    background-size: 2005px 1574px;
+  }
+  @include mobile {
+    background-size: 1003px 787px;
+  }
+  .main-wrapper {
+    position: relative;
+    min-height: 800px;
+    max-width: 100%;
+    width: 1200px;
+    margin: auto;
+    padding-top: 205px;
+    padding-bottom: 154px;
+    @include pad {
+      width: 708px;
+    }
+    @include mobile {
+      width: 320px;
+    }
+  }
+}
