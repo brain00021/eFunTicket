@@ -2,12 +2,21 @@
 @import "./breakpoints";
 @import "./header";
 // layout
+body{
+  background-color:#d2dcee;
+  font-family: 'M PLUS Rounded 1c','Microsoft JhengHei','STHeiti', sans-serif;
+  overflow-x: hidden;
+  @include pad {
+    padding-top: 50px;
+  }
+}
 .main {
-  background-color: #a21e00;
-  background-image: url(../img/money/bg-brick.png);
+  // background-color: #a21e00;
+  position: relative;
   background-size: 3342px 2623px;
   background-repeat: repeat;
   background-position-x: center;
+  padding-top: 60px;
   @include pad {
     background-size: 2005px 1574px;
   }
@@ -20,13 +29,132 @@
     max-width: 100%;
     width: 1200px;
     margin: auto;
-    padding-top: 205px;
-    padding-bottom: 154px;
+    
+    // padding-bottom: 154px;
     @include pad {
-      width: 708px;
+      width: 768px;
     }
     @include mobile {
-      width: 320px;
+      width: 375px;
     }
   }
+}
+
+
+.banner-bg-wrapper{
+  background:url('../img/cloud-bg.svg') center  80% repeat-x;
+  background-size: 2053px  857px;
+  position: relative;
+  padding-top:10px;
+  // padding:inherit;
+  .flag{
+    width:564px;
+    height:204px;
+    position: absolute;
+    top:0px;
+    img{width:100%;}
+    &.flag-left{
+  
+      left:0;
+      transform: scaleX(-1);
+    }
+    &.flag-right{
+      right:0;
+    }
+  }
+  .bg-tree{
+    position: absolute;
+    bottom:0;
+    background:url('../img/banner-tree-bg.svg')  center 80% no-repeat;
+    background-size: 2448px  523px;
+    min-height: 523px;
+    width:100%;
+  }
+  .bg-hill{
+    position: absolute;
+    bottom:0;
+    background:url('../img/banner-bottom-bg.svg') no-repeat bottom center;
+    background-size: 2448px  115px;
+    min-height: 115px;
+    width:100%;
+  }
+}
+.bannner{
+  margin-top:50px;
+}
+//slogan
+.slogan-wrapper{
+  width:100%;
+  position: relative;
+  margin:auto;
+  z-index: 10;
+}
+.music-icon{
+  z-index: 3;
+  width:55px;
+  height:60px;
+  position: absolute;
+  margin:auto;
+  top:0;
+  bottom:0;
+}
+.music-left-icon{
+  @extend .music-icon;
+  top:20px;
+  left:0;
+}
+.music-right-icon{
+  @extend .music-icon;
+  top:50px;
+  right:0;
+}
+.slogan{
+  position: relative;
+  z-index: 2;
+  width:869px;
+  height:218px;
+  img{width:100%;}
+  margin:auto;
+}
+.slogan2{
+  position: relative;
+  width:1176px;
+  height:136px;
+  margin:auto;
+  top:0px;
+  z-index: 5;
+  animation: flyingbird 5s infinite ease-in-out;
+  img{width:100%;}
+}
+
+.gelatine {
+  animation: gelatine 0.5s infinite;
+}
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}
+@keyframes flyingbird {
+  25% { transform: translateY(-50px); }
+  50% { transform: translateY(-10px); }
+  75% { transform: translateY(-50px); }
+}
+.concern-wrapper{
+  position: relative;
+  width:100%;
+  height:650px;
+}
+.conern-platform{
+  position: absolute;
+  z-index: 5;
+  bottom:80px;
+  left:50px;
+}
+.conern-dancefan{
+  position: absolute;
+  z-index: 5;
+  bottom: 50px;
+  left:-15px;
 }
