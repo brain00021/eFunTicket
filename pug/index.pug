@@ -16,7 +16,6 @@ head
   // style
   link(rel='stylesheet', href='./css/all.css')
   // ga追蹤碼
-  script(src='./js/ga.js')
 // 導覽列
 nav.header
   .header-wrapper
@@ -29,12 +28,13 @@ nav.header
       span
       span
     .nav-links
-      a(href='' data-selection="banner") 活動辦法
+      a(href='' data-selection="selectionDetail") 活動辦法
       a(href='./game.html') 影音FUN肆看
       a(href='./calc.html') 回饋FUN心拿
 // 下方區域
 section.main
     include ./banner.pug
+    include ./selectionDetail.pug
 
 // js
 script(src='./js/lib/jquery.min.js')

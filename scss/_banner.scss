@@ -1,0 +1,199 @@
+
+.banner-bg-wrapper{
+  background:url('../img/bg-banner-web.svg')  center 105% repeat-x;
+  background-size: 2448px 807px;
+  position: relative;
+  padding-top:10px;
+  overflow: hidden;
+  @include pad {
+    background: url('../img/bg-banner-pad.svg') 65% 100% repeat-x;
+    background-size: 1526px 493px;
+  }
+  @include mobile {
+    background:url('../img/bg-banner-mob.svg')  50% 130% repeat-x;
+    background-size:981px 481px;
+  }
+  // padding:inherit;
+  .flag{
+    width:450px;
+    height:204px;
+    position: fixed;
+    top:60px;
+    @include pad {
+      top:50px;
+      width:300px;
+      height:202px;
+    }
+    @include mobile {
+      width:175px;
+      height:80px;
+    }
+    img{width:100%;}
+    &.flag-left{
+  
+      left:0;
+      transform: scaleX(-1);
+    }
+    &.flag-right{
+      right:0;
+    }
+  }
+  // .bg-tree{
+  //   position: absolute;
+  //   bottom:0;
+  //   background:url('../img/banner-tree-bg.svg')  center 80% no-repeat;
+  //   background-size: 2448px  523px;
+  //   min-height: 523px;
+  //   width:100%;
+  // }
+  // .bg-hill{
+  //   position: absolute;
+  //   bottom:0;
+  //   background:url('../img/banner-bottom-bg.svg') no-repeat bottom center;
+  //   background-size: 2448px  115px;
+  //   min-height: 115px;
+  //   width:100%;
+  // }
+}
+.bannner{
+  margin-top:50px;
+}
+//slogan
+.slogan-wrapper{
+  width:100%;
+  position: relative;
+  margin:auto;
+  z-index: 10;
+  margin-top:60px;
+}
+.music-icon{
+  z-index: 3;
+  width:55px;
+  height:60px;
+  position: absolute;
+  margin:auto;
+  top:0;
+  bottom:0;
+  @include pad {
+    width:33px;
+    height:40px;
+  }
+  @include mobile {
+    width:21px;
+    height:30px;
+  }
+}
+.music-left-icon{
+  @extend .music-icon;
+  top:20px;
+  left:0;
+}
+.music-right-icon{
+  @extend .music-icon;
+  top:50px;
+  right:0;
+}
+.slogan{
+  position: relative;
+  z-index: 2;
+  width:869px;
+  height:218px;
+  @include pad {
+    width:542px;
+    height:137px;
+  }
+  @include mobile {
+    width:375px;
+    height:100px;
+  }
+  img{width:100%;}
+  margin:auto;
+}
+.slogan2{
+  position: relative;
+  width:1176px;
+  height:136px;
+  margin:auto;
+  top:0px;
+  z-index: 5;
+  animation: flyingbird 5s infinite ease-in-out;
+  @include pad {
+    width:734px;
+    height:83px;
+  }
+  @include mobile {
+    width:530px;
+    height: 60px;
+    left:-20%;
+    top:20px;
+  }
+  img{width:100%;}
+}
+
+.gelatine {
+  animation: gelatine 0.5s infinite;
+}
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}
+@keyframes flyingbird {
+  25% { transform: translateY(-50px); }
+  50% { transform: translateY(-10px); }
+  75% { transform: translateY(-50px); }
+}
+.concern-wrapper{
+  position: relative;
+  width:100%;
+  height:650px;
+  @include pad {
+    height:437px;
+  }
+  @include mobile {
+    height:400px;
+  }
+}
+.conern-platform{
+  position: absolute;
+  z-index: 5;
+  bottom:80px;
+  left:50px;
+  width:1461px;
+  height:551px;
+  img{width:100%;}
+  @include pad {
+    width: 768px;
+    height:291px;
+    bottom: 80px;
+    left: 0px;
+  }
+  @include mobile {
+    width: 690px;
+    height:262px;
+    left:-50%;
+    bottom: 80px;
+  }
+}
+.conern-dancefan{
+  position: absolute;
+  z-index: 5;
+  bottom: 50px;
+  left:-15px;
+  width: 556px;
+  height:282px;
+  @include pad {
+    width: 269px;
+    height:188px;
+    left:-80px;
+    bottom:0;
+  }
+  @include mobile {
+    width: 338px;
+    height:169px;
+    bottom: 10px;
+    left: -120px;
+  }
+  img{width:100%;}
+}
