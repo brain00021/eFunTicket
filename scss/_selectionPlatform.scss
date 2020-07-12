@@ -1,0 +1,262 @@
+
+.selectionPlatform-bg-wrapper{
+  background:url('../img/selection-platform-bg.svg') no-repeat top center;
+  background-size: 2048px 1270px;
+  position: relative;
+  overflow: hidden;
+  top: -130px;
+  padding-top:130px;
+  padding-bottom:130px;
+  @include mobile{
+    background-size: cover;
+  }
+  .red-tree{
+    position: absolute;
+    margin:auto;
+    top: 0;
+    left:0;
+    @include pad {
+      left:-120px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  .orange-tree{
+    position: absolute;
+    margin:auto;
+    bottom:0px;
+    right:-100px;
+    z-index: 2;
+    @include pad {
+      right:-100px;
+      bottom:-100px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+}
+#selectionPlatform-title {
+  @extend #selectionDetail-title;
+  height:auto;
+
+}
+#selectionPlatform-description{
+  position: relative;
+  min-height: 380px;
+}
+#selectionPlatform-description-innerWrapper{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@include mobile {
+  .role:after{
+    content:'';
+    display:block;
+    position: absolute;
+    background:url('../img/selection-platform-stamp.svg') no-repeat center center;
+    background-size: 100%;
+    @include size(375px,120px);
+    bottom: 0;
+    // transform: translateX(25%);
+    left:-25%;
+  }
+}
+
+.selectionPlatform-stamp{
+  @include size(1226px,260px);
+  position: absolute;
+  bottom:10px;
+  left:0;
+  img{width:100%}
+  @include pad{
+    @include size(768px,155px);
+    margin:auto;
+  }
+  @include mobile {
+    display:none;
+  }
+}
+.role-card{
+  position: relative;
+  width: 360px;
+  height: 200px;
+  border-radius: 15px;
+  padding:5px;
+  transform-style: preserve-3d;//关键代码
+  transition: transform 1s;
+  @include pad {
+    @include size(auto,auto);
+
+  }
+  &:hover{
+    transform: rotateY(180deg);
+  }
+  .role-detial-bg{
+
+    background-color: purple;
+    transform: rotateY(180deg);
+    // visibility: hidden;
+    position: absolute;
+    margin:auto;
+    top:0;
+    left:0;
+    right:0;
+    @include size(100%,100%);
+    border-radius: 15px;
+    backface-visibility: hidden;//关键代码
+
+  }
+  .role-detial{
+    transform-style: preserve-3d;//关键代码
+    transition: transform 1s;
+    line-height: 0;
+    margin-top:10px;
+    text-align: center;
+  }
+  h3{
+    padding:5px;
+    border-radius: 15px;
+    font-size: 22px;
+    @include pad {
+      font-size: 18px;
+    }
+  }
+  .quate{
+    display: inline-block;
+    @include size(23px,auto);
+    position: relative;
+    font-family: STYuanti-TC;
+    font-size: 53.5px;
+    color:#fff;
+    &:first-child{
+      top:25px;
+    }
+    &:last-child {
+      transform:scaleY(-1);
+    }
+  }
+  .title{
+    display: inline;
+    background:#fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 36px;
+    padding:5px;
+    border-radius: 15px;
+    text-align: center;
+    color: #18336d;
+    @include pad {
+      font-size:12px;
+    }
+    b{
+      text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+      color: #e24d34;
+      font-weight: bold;
+      font-size:26px;
+    }
+  }
+  a{
+    display: block;
+    text-align:center;
+    color:#fff;
+    margin-top:15px;
+    text-decoration:none;
+    text-shadow: -1px 0 #b9711b, 0 1px #b9711b, 1px 0 #b9711b, 0 -1px #b9711b;
+  }
+
+}
+.role-bg{
+  position:relative;
+  z-index: 2;
+}
+#role1{
+  position: relative;
+  
+  h3{
+    background:#2f842c;
+  }
+  .role-card{
+    background-color:#9dcd9a;
+    // left:100px;
+    @include pad {
+      @include size(252px,200px);
+  
+    }
+  }
+  .role-bg{
+    position: relative;
+    @include size(367px,278px);
+    background:url('../img/selection-platform-role1.svg') no-repeat center center;
+    background-size: 100%;
+    left:-100px;
+    @include pad{
+      @include size(252px,195px)
+    }
+  }
+}
+
+#role2{
+  position: relative;
+  
+  h3{
+    background:#b9711b;
+  }
+  .role-card{
+    background-color:#f3ab55;
+    // left:106px;
+    width: 319px;
+    height: 170px;
+    @include pad {
+      @include size(224px,200px);
+    }
+  }
+  .role-bg{
+    position: relative;
+    left:-80px;
+    @include size(334px,257px);
+    background:url('../img/selection-platform-role2.svg') no-repeat center center;
+    background-size: 100%;
+    @include pad{
+      @include size(252px,195px)
+    }
+  }
+}
+
+#role3{
+  position: relative;
+  // left:-90px;
+  h3{
+    background:#bc454c;
+  }
+  .role-card{
+    background-color:#fa7880;
+    // left:106px;
+    width: 319px;
+    height: 170px;
+    @include pad {
+      @include size(224px,200px);
+    }
+  }
+  .role-bg{
+    position:relative;
+    left:80px;
+    @include size(275px,326px);
+    background:url('../img/selection-platform-role3.svg') no-repeat center center;
+    background-size: 100%;
+    @include pad{
+      @include size(184px,229px)
+    }
+  }
+  a{
+
+    text-shadow: -1px 0 #bc454c, 0 1px #bc454c, 1px 0 #bc454c, 0 -1px #bc454c;
+  }
+}

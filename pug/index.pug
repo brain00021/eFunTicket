@@ -19,22 +19,26 @@ head
 // 導覽列
 nav.header
   .header-wrapper
-    a.logo(href='index.html')
-      img(src='./img/nav-logo.png', alt='台北富邦銀行')
-      span FUN膽藝起玩
     input#menu-toggle(type='checkbox')
     label(for='menu-toggle')
       span
       span
       span
+    a.logo(href='index.html')
+      img(src='./img/nav-logo.png', alt='台北富邦銀行')
+      span FUN膽藝起玩
+
     .nav-links
       a(href='' data-selection="selectionDetail") 活動辦法
-      a(href='./game.html') 影音FUN肆看
+      a(href='./game.html' data-selection="selectionPlatform") 影音FUN肆看
       a(href='./calc.html') 回饋FUN心拿
 // 下方區域
 section.main
     include ./banner.pug
     include ./selectionDetail.pug
+    include ./selectionPlatform.pug
+include ./footer.pug
+
 
 // js
 script(src='./js/lib/jquery.min.js')

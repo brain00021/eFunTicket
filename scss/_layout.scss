@@ -1,0 +1,85 @@
+body{
+  background-color:#d2dcee;
+  font-family: 'M PLUS Rounded 1c','MicrosoftJhengHei','Microsoft JhengHei','STHeiti', sans-serif;
+  overflow-x: hidden;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  text-align: center;
+  color: #18336d;
+}
+h2{
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.79;
+  letter-spacing: 1px;
+  color: #18336d;
+}
+h3{
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #ffffff;
+}
+h4{
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #18336d;
+}
+h5{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.94;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #18336d;
+}
+h6{
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #18336d;
+}
+.red-tree{
+  position: absolute;
+  z-index: 0;
+}
+.orange-tree{
+  position: absolute;
+  z-index: 0;
+}
+.main {
+  // background-color: #a21e00;
+  position: relative;
+  // background-size: 3342px 2623px;
+  background-repeat: repeat;
+  background-position-x: center;
+  padding-top: 60px;
+  @include pad {
+    padding-top:50px;
+  }
+  .main-wrapper {
+    position: relative;
+    // min-height: 800px;
+    max-width: 100%;
+    width: 1200px;
+    margin: auto;
+    
+    // padding-bottom: 154px;
+    @include pad {
+      width: 768px;
+    }
+    @include mobile {
+      width: 375px;
+    }
+  }
+}
