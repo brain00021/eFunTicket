@@ -1,0 +1,117 @@
+// coupon
+.selectionCoupon-bg-wrapper{
+  @extend .selectionPlatform-bg-wrapper;
+  background:url('../img/selection-coupon-bg.svg') no-repeat top center;
+  top:-300px;
+  overflow: hidden;
+  @include pad{
+    background-size:cover;
+  }
+}
+#selectionCoupon-description{
+  margin-top:150px;
+}
+#selectionCoupon-title{
+  @extend #selectionDetail-title;
+  height:auto;
+}
+#selectionCoupon-description-innerWrapper{
+  display:flex;
+  justify-content:space-between;
+  // min-height:500px;
+  @include pad {
+    flex-direction: column;
+  }
+}
+.coupon{
+  // font-family: 'GenJyuuGothic';
+  cursor:pointer;
+  @include size(512px,214px);
+ 
+  padding-left:100px;
+  padding-right:30px;
+  margin:10px auto;
+
+  &:hover{
+    .icon-wrapper .icon .icon-more{
+      opacity: 1;
+      right:-100px;
+    }
+  }
+  h3{
+    position: relative;
+    display: block;
+    margin-top:42px;
+  }
+  .detail{
+    position: relative;
+    @include size(260px,70px);
+    margin:30px auto 0;
+    line-height: 1.94;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
+    font-size:18px;
+    .icon-wrapper{
+      position: absolute;
+
+      display:flex;
+      flex-wrap:nowrap;
+      align-items:flex-end;
+      right: -150px;
+      top: -60px;
+    }
+    .icon{
+      position: relative;
+      @include size(150px,196px);
+      img{width:100%}
+
+    }
+    .icon-more{
+      position: absolute;
+      @include size(142px,112px);
+      bottom:0;
+      right:-150px;
+      transition: all 0.5s ease;
+      opacity: 0;
+      img{
+        width:100%;
+      }
+    }
+  }
+}
+#coupon1{
+  background:url('../img/ticket-1.png') no-repeat center center;
+  background-size:100%;
+  &:hover{
+    background:url('../img/ticket-1-hover.png') no-repeat center center;
+    background-size:100%;
+  }
+  &:active{
+    background:url('../img/ticket-1-active.png') no-repeat center center;
+    background-size:100%;
+  }
+}
+#coupon2{
+  background:url('../img/ticket-2.png') no-repeat center center;
+  background-size:100%;
+  &:hover{
+    background:url('../img/ticket-2-hover.png') no-repeat center center;
+    background-size:100%;
+  }
+  &:active{
+    background:url('../img/ticket-2-active.png') no-repeat center center;
+    background-size:100%;
+  }
+}
+
+#selectionCoupon-description-bg{
+  @include size(935px,316px);
+  margin:auto;
+  margin-top:150px;
+  @include pad {
+    margin-top:50px;
+    width:768px;
+  }
+  img{width:100%}
+}

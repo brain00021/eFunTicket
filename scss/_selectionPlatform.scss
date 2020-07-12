@@ -6,7 +6,7 @@
   overflow: hidden;
   top: -130px;
   padding-top:130px;
-  padding-bottom:130px;
+  padding-bottom:200px;
   @include mobile{
     background-size: cover;
   }
@@ -45,6 +45,7 @@
 #selectionPlatform-description{
   position: relative;
   min-height: 380px;
+  margin-top:150px;
 }
 #selectionPlatform-description-innerWrapper{
   position: relative;
