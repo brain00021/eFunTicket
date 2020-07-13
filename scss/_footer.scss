@@ -5,16 +5,31 @@ footer{
   overflow:hidden;
   position: relative;
   z-index: 20;
+  font-family: 'Microsoft JhengHei';
   .selection1{
     background-color:#d70c18;
     color:#fff;
     text-align: center;
     padding:15px;
     width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include pad {
+      width:100%;
+      span{display:none;}
+    }
   }
   .selection2{
     background-color:#acacac;
     width:20%;
     padding:15px;
+    @include pad {
+      display:none;
+    }
+    .logo{
+      @include size(113px,30px);
+
+    }
   }
 }

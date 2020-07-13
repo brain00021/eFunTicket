@@ -1,0 +1,145 @@
+.dialog-wrapper{
+  position: relative;
+  margin:30px;
+}
+.dialog-bg{
+  background:rgba(#18336d,.5);
+  @include size(100%,100%);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 999;
+  overflow: auto;
+  padding:30px 0;
+  display: none;
+}
+.dialog-btn{
+  width: 58px;
+  height: 58px;
+  background-color: #18336d;
+  position: absolute;
+  top:-50px;
+  right:-80px;
+  z-index: 3;
+  float: right;
+  @include pad {
+    right:0;
+  }
+}
+.dialog-content{
+  width:100%;
+  border-radius: 30px;
+  background-color: #c1d9ee;
+  padding:50px;
+  position: relative;
+  
+  p{
+    line-height: 1.75;
+    letter-spacing: 1px;
+    color: #18336d;
+    font-size:16px;
+  }
+  .text-underline{
+    text-decoration:underline;
+  }
+  ul{
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 1px;
+    color: #18336d;
+    li{
+      ul{
+        padding-left:15px;
+      }
+    }
+  }
+  .card-wrapper{
+    display:flex;
+    // background-color:#fff;
+    overflow:hidden;
+    @include mobile{
+      flex-direction: column;
+    }
+
+    .card{
+      // background-color:#fff;
+      text-align: center;
+
+      &:first-child{
+        .th,.tbody{
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        }
+        .th{
+          @include mobile{
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        .tbody{
+          @include mobile {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+      &:last-child{
+        .th,.tbody{
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        }
+        .th{
+          @include mobile{
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        .tbody{
+          @include mobile {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+      .th{
+        font-size: 16px;
+        font-weight: bold;
+        color: #18336d;
+        // background:#fff;
+        
+        @include mobile{
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          
+        }
+      }
+      .th,.tbody{
+        background:#fff;
+        padding:10px;
+        border: 5px solid #c1d9ee;
+        font-size: 16px;
+        line-height: 1.75;
+        letter-spacing: 1px;
+        color: #18336d;
+
+      }
+      .tbody{
+        min-width: 338px;
+        min-height: 142px;
+        text-align: left;
+        @include pad {
+          min-width:200px;
+          min-height: 254px;
+        }
+        @include mobile {
+          min-height:50px;
+          border-top-right-radius: 0;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+      }
+
+    }
+  }
+}

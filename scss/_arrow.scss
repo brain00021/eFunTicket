@@ -1,0 +1,80 @@
+$ani-speed: 2s;
+$ani-delay: 1s;
+#scrollDownBtn{
+  position: absolute;
+  margin:auto;
+  left:0;
+  right:0;
+  bottom:-20px;
+  width:120px;
+  cursor: pointer;
+  height:100px;
+
+  z-index: 40;
+  text-align:center;
+  color:#fff;
+  span{
+    display: block;
+    padding-bottom:15px;
+  }
+  .icon{
+    // @include size(30px,30px);
+    margin:auto;
+    @include size(40px,40px);
+    border-radius: 50%;
+    background:#fff;
+    position:relative;
+  }
+}
+
+.arrow {
+    opacity: 0;
+    position: absolute;
+        left: 40%;
+        top: 50%;
+    transform-origin: 50% 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-first {
+    animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+.arrow-second {
+    animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+    background: #000;
+    content: '';
+    display: block;
+    height: 1px; 
+    position: absolute;
+        top: 5px;
+        left: 0;
+    width: 10px;
+}
+
+.arrow:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+}
+
+// Animation
+@keyframes arrow-movement {
+    0% { 
+        opacity: 0;
+        top: 5px;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
+}

@@ -12,6 +12,7 @@
   <meta property="og:image" content="">
   <!-- google font-->
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
   <!-- style-->
   <link rel="stylesheet" href="./css/all.css">
   <!-- ga追蹤碼-->
@@ -42,6 +43,12 @@
           <div class="concern-wrapper">
             <div class="conern-platform"><img src="./img/concern-bg.svg" alt=""></div>
             <div class="conern-dancefan"><img src="./img/banner-dancefan-bg.svg" alt=""></div>
+          </div>
+          <div id="scrollDownBtn" data-selection="selectionDetail"><span>向下滑動看更多</span>
+            <div class="icon">
+              <div class="arrow arrow-first"></div>
+              <div class="arrow arrow-second"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -76,9 +83,11 @@
             <div id="selectionPlatform-description-innerWrapper">
               <div class="role" id="role1">
                 <div class="role-card">
-                  <h3>數位影音通路刷卡金哪裡用</h3>
-                  <div class="role-detial">
-                    <p><span class="quate">“</span><span class="title">Netflix、KKBOX(含KKBOX Prime、KKTV) Spotify、Li TV</span><span class="title">CATCHPLAY+、遠傳friDay音樂 Line TV、Line Music、愛奇藝。</span><span class="quate">“</span></p>
+                  <div class="role-detail-front">
+                    <h3>數位影音通路刷卡金哪裡用</h3>
+                    <div class="role-detial">
+                      <p><span class="quate">“</span><span class="title">Netflix、KKBOX(含KKBOX Prime、KKTV) Spotify、Li TV</span><span class="title">CATCHPLAY+、遠傳friDay音樂 Line TV、Line Music、愛奇藝。</span><span class="quate">“</span></p>
+                    </div>
                   </div>
                   <div class="role-detial-bg"> </div>
                 </div>
@@ -86,20 +95,24 @@
               </div>
               <div class="role" id="role2">
                 <div class="role-card">
-                  <h3>KKTV</h3>
-                  <div class="role-detial">
-                    <p><span class="quate">“</span><span class="title">只要刷台新VISA卡，KKTV</span><span class="title">KKTV) 首<b>3</b>個月每月只要<b>9   </b>元！</span><span class="quate">“</span></p>
-                  </div><a>了解更多 >></a>
+                  <div class="role-detail-front">
+                    <h3>KKTV</h3>
+                    <div class="role-detial">
+                      <p><span class="quate">“</span><span class="title">只要刷台新VISA卡，KKTV</span><span class="title">KKTV) 首<b>3</b>個月每月只要<b>9   </b>元！</span><span class="quate">“</span></p>
+                    </div><a>了解更多 >></a>
+                  </div>
                   <div class="role-detial-bg"> </div>
                 </div>
                 <div class="role-bg"></div>
               </div>
               <div class="role" id="role3">
                 <div class="role-card">
-                  <h3>KKTV</h3>
-                  <div class="role-detial">
-                    <p><span class="quate">“</span><span class="title">只要刷台新VISA卡，KKTV<br></span><span class="title">KKTV) 首<b>3</b>個月每月只要<b>9   </b>元！</span><span class="quate">“</span></p>
-                  </div><a>了解更多 >></a>
+                  <div class="role-detail-front">
+                    <h3>KKTV</h3>
+                    <div class="role-detial">
+                      <p><span class="quate">“</span><span class="title">只要刷台新VISA卡，KKTV<br></span><span class="title">KKTV) 首<b>3</b>個月每月只要<b>9   </b>元！</span><span class="quate">“</span></p>
+                    </div><a>了解更多 >></a>
+                  </div>
                   <div class="role-detial-bg"> </div>
                 </div>
                 <div class="role-bg"></div>
@@ -118,24 +131,24 @@
           <div id="selectionCoupon-title"><img src="./img/selection-coupon-title.svg"></div>
           <div id="selectionCoupon-description">
             <div id="selectionCoupon-description-innerWrapper">
-              <div class="coupon" id="coupon1">
+              <div class="coupon" id="coupon1"><a class="coupon-btn"><img src="./img/coupon-mob-btn.svg" alt=""></a>
                 <h3>台新三倍券回饋</h3>
                 <div class="detail">
                   <p>「振興三倍券」綁定台新卡 放大優惠 回饋滿手拿</p>
                   <div class="icon-wrapper">
                     <div class="icon"><img src="./img/coupon-icon-1.svg">
-                      <div class="icon-more"><img src="./img/coupon-icon-more.png"></div>
+                      <div class="icon-more"><img src="./img/coupon-icon-more.svg"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="coupon" id="coupon2">
+              <div class="coupon" id="coupon2"><a class="coupon-btn"><img src="./img/coupon-mob-btn.svg" alt=""></a>
                 <h3>三大影城 天天折</h3>
                 <div class="detail">
                   <p>新光影城、威秀影城，國賓影城週一～週五最低<b>68</b>折起</p>
                   <div class="icon-wrapper">
                     <div class="icon"><img src="./img/coupon-icon-2.svg">
-                      <div class="icon-more"><img src="./img/coupon-icon-more.png"></div>
+                      <div class="icon-more"><img src="./img/coupon-icon-more.svg"></div>
                     </div>
                   </div>
                 </div>
@@ -151,7 +164,7 @@
     <div class="dialog-bg">
       <div class="dialog-wrapper">
         <div class="main-wrapper">
-          <div class="dailog-btn"></div>
+          <div class="dialog-btn" id="dialog-btn"><img src="img/dialog-close.svg"></div>
           <div class="dialog-content">
             <p>活動內容：</p><br>
             <p>活動期間內刷台新信用卡於指定藝文通路單筆消費滿NT$1,000(含)贈100元刷卡金 ，<span class="text-underline">刷卡金限折抵109/11/1~110/1/31指定數位影音通路消費，未折抵刷卡金將歸零。</span>(限量登錄20,000份，正附卡合併計算，每歸戶正卡人ID上限刷卡金100元)</p>
@@ -199,7 +212,9 @@
     <div class="selection1">
       <p>©️ 台新國際商業銀行<span> Copyright Taishin International Bank. All Rights Reserved</span></p>
     </div>
-    <div class="selection2"><img src="./img/"></div>
+    <div class="selection2">
+      <div class="logo"><img src="./img/footerLogo.svg"></div>
+    </div>
   </footer>
 </body>
 <!-- js-->

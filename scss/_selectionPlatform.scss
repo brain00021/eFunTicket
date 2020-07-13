@@ -99,9 +99,16 @@
   }
   &:hover{
     transform: rotateY(180deg);
+    .role-detail-front{
+      transform-style: preserve-3d;//关键代码
+    }
+  }
+  .role-detail-front{
+    opacity: 1;
+    transition: transform 5s;
   }
   .role-detial-bg{
-
+    transform-style: preserve-3d;//关键代码
     background-color: purple;
     transform: rotateY(180deg);
     // visibility: hidden;
@@ -187,6 +194,9 @@
   .role-card{
     background-color:#9dcd9a;
     // left:100px;
+    .role-detial-bg{
+      background-color:#9dcd9a;
+    }
     @include pad {
       @include size(252px,200px);
   
@@ -215,6 +225,9 @@
     // left:106px;
     width: 319px;
     height: 170px;
+    .role-detial-bg{
+      background-color:#f3ab55;
+    }
     @include pad {
       @include size(224px,200px);
     }
@@ -242,6 +255,9 @@
     // left:106px;
     width: 319px;
     height: 170px;
+    .role-detial-bg{
+      background-color:#fa7880;
+    }
     @include pad {
       @include size(224px,200px);
     }
