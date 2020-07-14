@@ -1,4 +1,70 @@
 // layout
+.footer-bg{
+  position: relative;
+  // overflow-x: hidden;
+  .red-tree,.orange-tree{
+    position: absolute;
+    bottom:0;
+    overflow: hidden;
+    
+  }
+  .red-tree:first-child{
+    @include size(306px,403px);
+    @include pad {
+      @include size(200px,283px);
+    }
+    img{
+      position: relative;
+      left:-50px;
+      width:100%}
+    left:0px;
+  }
+  .orange-tree:nth-child(2){
+    @include size(263px,333px);
+
+    img{
+      width:100%}
+    // top:0px;
+    left:150px;
+    @include pad {
+      @include size(147px,205px);
+      left:50px;
+    }
+  }
+  .red-tree:nth-child(3){
+    @include size(243px,371px);
+    @include pad {
+      @include size(126px,216px);
+    }
+    @include mobile {
+      display: none;
+    }
+    img{
+      position: relative;
+      right:-20px;
+      width:100%}
+    // top:0px;
+    right:0;
+   
+  }
+  .orange-tree:nth-child(4){
+    @include size(375px,465px);
+    img{width:100%}
+    // top:0px;
+    right:150px;
+    @include pad {
+      @include size(210px,269px);
+      right:50px;
+    }
+    @include mobile {
+      right:0px;
+      img{
+        position: relative;
+        right:-50px;
+        width:100%}
+    }
+  }
+}
 footer{
   display:flex;
   justify-content:space-between;

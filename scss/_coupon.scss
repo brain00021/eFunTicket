@@ -6,12 +6,20 @@
   top:-300px;
   overflow: hidden;
   // padding-bottom:150px;
-  @include pad{
-    background-size:cover;
+  @include pad {
+    background:url('../img/selection-coupon-pad-bg.svg') no-repeat top center;
+    background-size: cover;
+  }
+  @include mobile{
+    background:url('../img/selection-coupon-mob-bg.svg') no-repeat top center;
+    background-size: cover;
   }
 }
 #selectionCoupon-description{
   margin-top:150px;
+  @include mobile{
+    margin-top:50px;
+  }
 }
 #selectionCoupon-title{
   @extend #selectionDetail-title;
@@ -121,6 +129,7 @@
 #coupon1{
   background:url('../img/ticket-1.png') no-repeat center center;
   background-size:100%;
+  z-index: 5;
   &:hover{
     background:url('../img/ticket-1-hover.png') no-repeat center center;
     background-size:100%;
@@ -150,9 +159,18 @@
   @include pad {
     margin-top:50px;
     width:768px;
+    margin-bottom:150px;
   }
   @include mobile {
     width:640px;
+    margin-bottom:50px;
   }
   img{width:100%}
+}
+.squirrel{
+  @include size(75px,74px);
+  background: url('../img/squirrel.svg') no-repeat center center;
+  position: absolute;
+  bottom:300px;
+  left:10px;
 }

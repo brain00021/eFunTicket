@@ -7,7 +7,12 @@
   top: -130px;
   padding-top:130px;
   padding-bottom:200px;
+  @include pad {
+    background:url('../img/selection-platform-pad-bg.svg') no-repeat top center;
+    background-size: cover;
+  }
   @include mobile{
+    background:url('../img/selection-platform-mob-bg.svg') no-repeat top center;
     background-size: cover;
   }
   .red-tree{
@@ -46,6 +51,9 @@
   position: relative;
   min-height: 380px;
   margin-top:150px;
+  @include mobile{
+    margin-top:0;
+  }
 }
 #selectionPlatform-description-innerWrapper{
   position: relative;
@@ -90,18 +98,13 @@
   width: 360px;
   height: 200px;
   border-radius: 15px;
+  top:30px;
   padding:5px;
   transform-style: preserve-3d;//关键代码
-  transition: transform 1s;
+  transition: all 0.5s;
   @include pad {
     @include size(auto,auto);
 
-  }
-  &:hover{
-    transform: rotateY(180deg);
-    .role-detail-front{
-      transform-style: preserve-3d;//关键代码
-    }
   }
   .role-detail-front{
     opacity: 1;
@@ -187,7 +190,6 @@
 }
 #role1{
   position: relative;
-  
   h3{
     background:#2f842c;
   }
@@ -208,15 +210,28 @@
     background:url('../img/selection-platform-role1.svg') no-repeat center center;
     background-size: 100%;
     left:-100px;
+    
     @include pad{
-      @include size(252px,195px)
+      @include size(252px,195px);
+     
+    }
+    @include mobile{
+      left:-60px;
     }
   }
 }
 
 #role2{
   position: relative;
-  
+  &:hover{
+    .role-bg{
+      background:url('../img/selection-platform-role2-hover.svg') no-repeat center center;
+      background-size: 100%;
+    }
+    .role-card{
+      top:0;
+    }
+  }
   h3{
     background:#b9711b;
   }
@@ -238,15 +253,26 @@
     @include size(334px,257px);
     background:url('../img/selection-platform-role2.svg') no-repeat center center;
     background-size: 100%;
+    transition:all .5s ease;
     @include pad{
       @include size(252px,195px)
     }
+
   }
 }
 
 #role3{
   position: relative;
   // left:-90px;
+  &:hover{
+    .role-bg{
+      background:url('../img/selection-platform-role3-hover.svg') no-repeat center center;
+      background-size: 100%;
+    }
+    .role-card{
+      top:0;
+    }
+  }
   h3{
     background:#bc454c;
   }
@@ -271,9 +297,43 @@
     @include pad{
       @include size(184px,229px)
     }
+    @include mobile{
+      left:55px;
+    }
   }
   a{
 
     text-shadow: -1px 0 #bc454c, 0 1px #bc454c, 1px 0 #bc454c, 0 -1px #bc454c;
   }
+}
+
+.bird{
+  @include size(162px,84px);
+  // background: url('../img/bird-1.svg') no-repeat center center;
+  position:absolute;
+  top:0;
+  right:0;
+  animation: bird 4s linear infinite;
+}
+
+@keyframes bird {
+  0%{
+    background: url('../img/bird-1.svg') no-repeat center center;
+  }
+  4%{
+    background: url('../img/bird-2.svg') no-repeat center center;
+  }
+  8%{
+    background: url('../img/bird-1.svg') no-repeat center center;
+  }
+  12%{
+    background: url('../img/bird-2.svg') no-repeat center center;
+  }
+  13%{
+    background: url('../img/bird-1.svg') no-repeat center center;
+  }
+  100%{
+    background: url('../img/bird-1.svg') no-repeat center center;
+  }
+
 }

@@ -25,17 +25,49 @@ $(function() {
   const title3 = $("#selectionCoupon-title");
   const title2 = $("#selectionPlatform-title");
   const footer = $('footer');
-  const title1Pos = title1.offset().top;
-  const title2Pos = title2.offset().top;
-  const title3Pos = title3.offset().top;
-  const footerPos = footer.offset().top;
-  
+  let title1Pos = title1.offset().top;
+  let title2Pos = title2.offset().top;
+  let title3Pos = title3.offset().top;
+  let footerPos = footer.offset().top;
+  // const coupon1 = $("#coupon1").offset().top;
+  // const coupon2 = $("#coupon1").offset().top;
+  $(window).resize(function(){
+    $(window).scrollTop(0,function(){
+      title1Pos = title1.offset().top;
+      title2Pos = title2.offset().top;
+      title3Pos = title3.offset().top;
+      footerPos = footer.offset().top;
+      return title1Pos,title2Pos,title3Pos,footerPos;
+    })
+
+   
+  })
   $(window).on('scroll', function(){
     let window = $(this).scrollTop();
 
     checkTitleClass(window,title1,title1Pos,title2Pos);
     checkTitleClass(window,title2,title2Pos,title3Pos);
     checkTitleClass(window,title3,title3Pos,footerPos);
+    if(window >= title1Pos){
+      $("#selectionDetail-description-bg").removeClass("animate__animated animate__flipOutX")
+      $("#selectionDetail-description-bg").addClass("animate__animated animate__flipInX")
+    }else{
+      $("#selectionDetail-description-bg").removeClass("animate__animated animate__flipInX")
+      $("#selectionDetail-description-bg").addClass("animate__animated animate__flipOutX")
+    }
+    // console.log( coupon1,coupon2)
+    if(window >= title3Pos - 50){
+      $('#coupon1').removeClass("animate__animated animate__fadeOutLeft")
+      $('#coupon2').removeClass("animate__animated animate__fadeOutRight")
+      $('#coupon1').addClass("animate__animated animate__fadeInLeft")
+      $('#coupon2').addClass("animate__animated animate__fadeInRight")
+
+    }else{
+      $('#coupon1').removeClass("animate__animated animate__fadeInLeft")
+      $('#coupon2').removeClass("animate__animated animate__fadeInRight")
+      $('#coupon1').addClass("animate__animated animate__fadeOutLeft")
+      $('#coupon2').addClass("animate__animated animate__fadeOutRight")
+    }
     // console.log(window);
   })
   function checkTitleClass(window,title,titlePos,endTitlePos){
@@ -61,5 +93,9 @@ $(function() {
       $("#dialog-btn").css('top',window + 'px');
     }
   });
+  setInterval(function(){
+    $('.squirrel').toggleClass('animate__animated animate__bounce animate__repeat-2')
+  },2000)
+
 
 });

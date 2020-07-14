@@ -5,6 +5,12 @@
   padding: 30px 0 150px;
   background-size: cover;
   overflow: hidden;
+  @include pad {
+    background:url("../img/selection-detail-pad-bg.svg") repeat center center;
+  }
+  @include mobile {
+    background:url("../img/selection-detail-mob-bg.svg") repeat center center;
+  }
   .red-tree{
     position: absolute;
     margin:auto;
@@ -142,13 +148,15 @@
     color:#18336d;
     font-size:22px;
     letter-spacing:2.2px;
-    font-weight: bold;
+    // font-weight: bold;
     border-radius: 25px;
     border-bottom: 5px solid #18336d;
     text-align: center;
     line-height: 48px;
     margin:auto;
     margin-top:10px;
+    font-family: 'Noto Sans TC';
+    font-weight: 1000;
     cursor:pointer;
     &:hover{
       background:#e7f4ff;
@@ -170,6 +178,7 @@
       background-color: #ffd974;
       border-bottom:5px solid #f28555;
       margin-top:60px;
+
       &:hover{
         background:#ffe49d;
         border-bottom: 5px solid #ffb493;

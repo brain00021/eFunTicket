@@ -6,7 +6,7 @@
   padding-top:10px;
   overflow: hidden;
   @include pad {
-    background: url('../img/bg-banner-pad.svg') 65% 100% repeat-x;
+    background: url('../img/bg-banner-pad.svg') center 100% repeat-x;
     background-size: 1526px 493px;
   }
   @include mobile {
