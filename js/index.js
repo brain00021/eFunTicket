@@ -50,7 +50,7 @@ $(function() {
    
   })
   $(window).on('scroll', function(){
-    let window = $(this).scrollTop();
+    let window = $(this).scrollTop() + windowHeight;
 
     checkTitleClass(window,title1,title1Pos,title2Pos);
     checkTitleClass(window,title2,title2Pos,title3Pos);
