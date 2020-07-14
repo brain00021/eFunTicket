@@ -31,15 +31,22 @@ $(function() {
   let footerPos = footer.offset().top;
   // const coupon1 = $("#coupon1").offset().top;
   // const coupon2 = $("#coupon1").offset().top;
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
   $(window).resize(function(){
-    $(window).scrollTop(0,function(){
-      title1Pos = title1.offset().top;
-      title2Pos = title2.offset().top;
-      title3Pos = title3.offset().top;
-      footerPos = footer.offset().top;
-      return title1Pos,title2Pos,title3Pos,footerPos;
-    })
-
+    // $(window).scrollTop(0,function(){
+    //   title1Pos = title1.offset().top;
+    //   title2Pos = title2.offset().top;
+    //   title3Pos = title3.offset().top;
+    //   footerPos = footer.offset().top;
+    //   return title1Pos,title2Pos,title3Pos,footerPos;
+    // })
+    if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
+      location.reload();
+      return;
+    }
+    // location.reload();
+    // return title1Pos,title2Pos,title3Pos,footerPos;
    
   })
   $(window).on('scroll', function(){
