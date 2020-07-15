@@ -49,6 +49,16 @@ $(function() {
     // return title1Pos,title2Pos,title3Pos,footerPos;
    
   })
+  $(document).on('click','.role',function(){
+    $(this).addClass('animate__animated animate__bounce')
+    let vm = this;
+    let time;
+    time = setTimeout(function(){
+      $(vm).removeClass('animate__animated animate__bounce')
+    },1000)
+    time();
+    clearTimeout(time)
+  })
   $(window).on('scroll', function(){
     let window = $(this).scrollTop() + windowHeight;
 
