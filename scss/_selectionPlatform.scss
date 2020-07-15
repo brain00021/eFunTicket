@@ -99,9 +99,10 @@
   height: 200px;
   border-radius: 15px;
   top:30px;
-  padding:5px;
+  // padding:5px;
   transform-style: preserve-3d;//关键代码
   transition: all 0.5s;
+  overflow: hidden;
   @include pad {
     @include size(auto,auto);
 
@@ -188,6 +189,9 @@
   position:relative;
   z-index: 2;
 }
+.role{
+  cursor: pointer;
+}
 #role1{
   position: relative;
   h3{
@@ -196,6 +200,16 @@
   .role-card{
     background-color:#9dcd9a;
     // left:100px;
+    // @include size(361px,197px);
+
+    .role-detail-front{
+      top:0;
+      left:0;
+      position: absolute;
+      @include size(100%,100%);
+      background:url('../img/platform-role1-card.png') no-repeat center center;
+      background-size:100%;
+    }
     .role-detial-bg{
       background-color:#9dcd9a;
     }
@@ -224,13 +238,27 @@
 #role2{
   position: relative;
   &:hover{
+    .role-detail-front{
+      background:url('../img/platform-role2-card-hover.png') no-repeat center center;
+      background-size:100%;
+    }
     .role-bg{
+      @include size(334px,268px);
       background:url('../img/selection-platform-role2-hover.svg') no-repeat center center;
       background-size: 100%;
+      bottom:11px;
     }
     .role-card{
       top:0;
     }
+  }
+  .role-detail-front{
+    position: absolute;
+    top:0;
+    left:0;
+    @include size(100%,100%);
+    background:url('../img/platform-role2-card.png') no-repeat center center;
+    background-size:100%;
   }
   h3{
     background:#b9711b;
@@ -238,8 +266,8 @@
   .role-card{
     background-color:#f3ab55;
     // left:106px;
-    width: 319px;
-    height: 170px;
+    width: 320px;
+    height: 200px;
     .role-detial-bg{
       background-color:#f3ab55;
     }
@@ -253,7 +281,7 @@
     @include size(334px,257px);
     background:url('../img/selection-platform-role2.svg') no-repeat center center;
     background-size: 100%;
-    transition:all .5s ease;
+    // transition:all .5s ease;
     @include pad{
       @include size(252px,195px)
     }
@@ -264,10 +292,25 @@
 #role3{
   position: relative;
   // left:-90px;
+  .role-detail-front{
+    position: absolute;
+    top:0;
+    left:0;
+    @include size(100%,100%);
+    background:url('../img/platform-role3-card.png') no-repeat center center;
+    background-size:100%;
+  }
   &:hover{
+    .role-detail-front{
+      background:url('../img/platform-role3-card-hover.png') no-repeat center center;
+      background-size:100%;
+    }
     .role-bg{
+      @include size(275px,337px);
       background:url('../img/selection-platform-role3-hover.svg') no-repeat center center;
       background-size: 100%;
+      bottom:11px;
+      margin-bottom:-11px;
     }
     .role-card{
       top:0;
@@ -279,8 +322,8 @@
   .role-card{
     background-color:#fa7880;
     // left:106px;
-    width: 319px;
-    height: 170px;
+    width: 320px;
+    height: 200px;
     .role-detial-bg{
       background-color:#fa7880;
     }

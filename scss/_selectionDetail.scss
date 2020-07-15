@@ -178,7 +178,18 @@
       background-color: #ffd974;
       border-bottom:5px solid #f28555;
       margin-top:60px;
-
+      position: relative;
+      b{
+        display: block;
+        @include size(15px,15px);
+        position:absolute;
+        margin:auto;
+        right:20px;
+        top:0;
+        bottom:0;
+        background:url('../img/arrow.png') no-repeat center center;
+        background-size:100%;
+      }
       &:hover{
         background:#ffe49d;
         border-bottom: 5px solid #ffb493;
