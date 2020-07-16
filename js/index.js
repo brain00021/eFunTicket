@@ -31,8 +31,8 @@ $(function() {
   let footerPos = footer.offset().top;
   // const coupon1 = $("#coupon1").offset().top;
   // const coupon2 = $("#coupon1").offset().top;
-  var windowWidth = $(window).width();
-  var windowHeight = $(window).height();
+  var windowWidth = $(window).innerWidth();
+  var windowHeight = $(window).innerHeight();
   $(window).resize(function(){
     // $(window).scrollTop(0,function(){
     //   title1Pos = title1.offset().top;
@@ -41,7 +41,7 @@ $(function() {
     //   footerPos = footer.offset().top;
     //   return title1Pos,title2Pos,title3Pos,footerPos;
     // })
-    if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
+    if(windowWidth != $(window).innerWidth() || windowHeight != $(window).innerHeight()) {
       location.reload();
       return;
     }
