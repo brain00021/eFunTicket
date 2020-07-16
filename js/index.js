@@ -1,7 +1,12 @@
+var checkbox;
+function handleClick(cb) {
+  console.log("Clicked, new value = " + cb.checked);
+  checkbox = cb;
+}
 $(function() {
   function tabSetting(e) {
     e.stopPropagation();
-    // e.preventDefault();
+    e.preventDefault();
     let showContent = this.getAttribute('data-selection');
     // $("#"+showContent).find("#"+showContent+"-title").removeClass("animate__animated animate__bounceInDown");
     $("#"+showContent).find("#"+showContent+"-title").addClass("animate__animated animate__bounceInDown");
@@ -9,14 +14,13 @@ $(function() {
     $("html, body").animate({ scrollTop: offset.top-50 }, 1000);
     // debugger;
     // $("#menu-toogle").attr("checked",false);
-    // $('#menu-toggle').attr('checked',false)
+    checkbox.checked = false;
   }
   $(document).on('click', '.nav-links a,#scrollDownBtn', tabSetting);
   //reset 
   $('body').css('overflow', 'auto');
   $(".dialog-bg").fadeOut();
-  //checksetting
-  // $('#menu-toggle').attr('checked',true)
+
   //dialog 設定
   $(document).on('click', '.dailog-btn,.dialog-bg',function(){
     $('body').css('overflow', 'auto');
@@ -30,45 +34,38 @@ $(function() {
   const title3 = $("#selectionCoupon-title");
   const title2 = $("#selectionPlatform-title");
   const footer = $('footer');
-  let title1Pos = title1.offset().top;
-  let title2Pos = title2.offset().top;
-  let title3Pos = title3.offset().top;
-  let footerPos = footer.offset().top;
-  // const coupon1 = $("#coupon1").offset().top;
-  // const coupon2 = $("#coupon1").offset().top;
-  var windowWidth = $(window).innerWidth();
-  var windowHeight = $(window).innerHeight();
+  // var windowHeight = $(window).innerHeight() - 60;
 // 內建瀏覽器設定
-var u = navigator.userAgent,
-ua = navigator.userAgent.toLowerCase(),
-isLineApp = u.indexOf("Line") > -1, // Line 內建瀏覽器
-isFbApp = u.indexOf("FBAV") > -1, // FB App 內建瀏覽器
-isWeixinApp = ua.match(/MicroMessenger/i) == "micromessenger"; // 微信內建瀏覽器
+// var u = navigator.userAgent,
+// ua = navigator.userAgent.toLowerCase(),
+// isLineApp = u.indexOf("Line") > -1, // Line 內建瀏覽器
+// isFbApp = u.indexOf("FBAV") > -1, // FB App 內建瀏覽器
+// isWeixinApp = ua.match(/MicroMessenger/i) == "micromessenger"; // 微信內建瀏覽器
 
-  $(window).resize(function(){
-    // $(window).scrollTop(0,function(){
-    //   title1Pos = title1.offset().top;
-    //   title2Pos = title2.offset().top;
-    //   title3Pos = title3.offset().top;
-    //   footerPos = footer.offset().top;
-    //   return title1Pos,title2Pos,title3Pos,footerPos;
-    // })
-    if(isLineApp && isFbApp && isWeixinApp){
-      if(windowWidth < $(window).innerWidth()-100 || windowHeight < $(window).innerHeight() -100 || windowWidth > $(window).innerWidth()+100 || windowHeight > $(window).innerHeight() +100  ) {
-        location.reload();
-        return;
-      }
-      return;
-    }
-    if(windowWidth != $(window).innerWidth() || windowHeight != $(window).innerHeight()) {
-      location.reload();
-      return;
-    }
+  // $(window).resize(function(){
+  //   // $(window).scrollTop(0,function(){
+  //   //   title1Pos = title1.offset().top;
+  //   //   title2Pos = title2.offset().top;
+  //   //   title3Pos = title3.offset().top;
+  //   //   footerPos = footer.offset().top;
+  //   //   return title1Pos,title2Pos,title3Pos,footerPos;
+  //   // })
+  //   if(isLineApp && isFbApp && isWeixinApp){
+  //     if(windowWidth < $(window).innerWidth()-100 || windowHeight < $(window).innerHeight() -100 || windowWidth > $(window).innerWidth()+100 || windowHeight > $(window).innerHeight() +100  ) {
+  //       location.reload();
+  //       return;
+  //     }
+  //     return;
+  //   }
+  //   if(windowWidth != $(window).innerWidth() || windowHeight != $(window).innerHeight()) {
+  //     location.reload();
+  //     return;
+  //   }
 
-    // location.reload();
-    // return title1Pos,title2Pos,title3Pos,footerPos;
+  //   // location.reload();
+  //   // return title1Pos,title2Pos,title3Pos,footerPos;
    
-  })
+  // })
   $(document).on('click','.role',function(){
     $(this).addClass('animate__animated animate__bounce')
     let vm = this;
@@ -80,12 +77,17 @@ isWeixinApp = ua.match(/MicroMessenger/i) == "micromessenger"; // 微信內建�
     clearTimeout(time)
   })
   $(window).on('scroll', function(){
-    let window = $(this).scrollTop() + windowHeight;
+    let windowScreenHeight = $(window).innerHeight() - 60;
+    let windowScreen = $(this).scrollTop() + windowScreenHeight;
+    let title1Pos = title1.offset().top;
+    let title2Pos = title2.offset().top;
+    let title3Pos = title3.offset().top;
+    let footerPos = footer.offset().top;
 
-    checkTitleClass(window,title1,title1Pos,title2Pos);
-    checkTitleClass(window,title2,title2Pos,title3Pos);
-    checkTitleClass(window,title3,title3Pos,footerPos);
-    if(window >= title1Pos){
+    checkTitleClass(windowScreen,title1,title1Pos,title2Pos);
+    checkTitleClass(windowScreen,title2,title2Pos,title3Pos);
+    checkTitleClass(windowScreen,title3,title3Pos,footerPos);
+    if(windowScreen >= title1Pos){
       $("#selectionDetail-description-bg").removeClass("animate__animated animate__flipOutX")
       $("#selectionDetail-description-bg").addClass("animate__animated animate__flipInX")
     }else{
@@ -93,7 +95,7 @@ isWeixinApp = ua.match(/MicroMessenger/i) == "micromessenger"; // 微信內建�
       $("#selectionDetail-description-bg").addClass("animate__animated animate__flipOutX")
     }
     // console.log( coupon1,coupon2)
-    if(window >= title3Pos - 50){
+    if(windowScreen >= title3Pos - 50){
       $('#coupon1').removeClass("animate__animated animate__fadeOutLeft")
       $('#coupon2').removeClass("animate__animated animate__fadeOutRight")
       $('#coupon1').addClass("animate__animated animate__fadeInLeft")
@@ -108,14 +110,14 @@ isWeixinApp = ua.match(/MicroMessenger/i) == "micromessenger"; // 微信內建�
     // console.log(window);
   })
   function checkTitleClass(window,title,titlePos,endTitlePos){
-    console.log(window,titlePos);
-    if(window > (titlePos -200) && window < (endTitlePos)){
+      // console.log(window,titlePos,'window位置','div位置');
+    if(window > (titlePos -200)){
       // debugger;
-      title.removeClass("animate__bounceOutUp")
-      title.addClass("animate__animated animate__bounceInDown")
+      title.find('.title').removeClass("animate__bounceOutUp")
+      title.find('.title').addClass("animate__animated animate__bounceInDown")
     }else{
-      title.removeClass("animate__bounceInDown")
-      title.addClass("animate__animated animate__bounceOutUp")
+      title.find('.title').removeClass("animate__bounceInDown")
+      title.find('.title').addClass("animate__animated animate__bounceOutUp")
       
     }
   }

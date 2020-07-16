@@ -20,7 +20,7 @@
 <body>
   <nav class="header">
     <div class="header-wrapper">
-      <input id="menu-toggle" type="checkbox">
+      <input id="menu-toggle" type="checkbox" onclick="handleClick(this);">
       <label for="menu-toggle"><span></span><span></span><span></span></label><a class="logo" href="index.html"><img src="./img/nav-logo.png" alt="台北富邦銀行"><span>FUN膽藝起玩</span></a>
       <div class="nav-links"><a href="#" data-selection="selectionDetail">活動辦法</a><a href="#" data-selection="selectionPlatform">影音FUN肆看</a><a href="#" data-selection="selectionCoupon">回饋FUN心拿</a></div>
     </div>
@@ -55,7 +55,9 @@
     <div class="selectionDetail-bg-wrapper">
       <div class="main-wrapper">
         <div id="selectionDetail">
-          <div id="selectionDetail-title"><img src="./img/selection-detail-title.svg"></div>
+          <div id="selectionDetail-title">
+            <div class="title"><img src="./img/selection-detail-title.svg"></div>
+          </div>
           <div id="selectionDetail-description">
             <div id="selectionDetail-description-innerWrapper">
               <h1>看電影、演唱會、藝文表演、買書，刷台新回饋享不盡</h1>
@@ -79,7 +81,9 @@
       <div class="main-wrapper">
         <div class="bird"></div>
         <div id="selectionPlatform">
-          <div id="selectionPlatform-title"><img src="./img/selection-platform-title.svg"></div>
+          <div id="selectionPlatform-title">
+            <div class="title"><img src="./img/selection-platform-title.svg"></div>
+          </div>
           <div id="selectionPlatform-description">
             <div id="selectionPlatform-description-innerWrapper">
               <div class="role" id="role1">
@@ -115,7 +119,9 @@
       <div class="main-wrapper">
         <div class="squirrel"></div>
         <div id="selectionCoupon">
-          <div id="selectionCoupon-title"><img src="./img/selection-coupon-title.svg"></div>
+          <div id="selectionCoupon-title">
+            <div class="title"><img src="./img/selection-coupon-title.svg"></div>
+          </div>
           <div id="selectionCoupon-description">
             <div id="selectionCoupon-description-innerWrapper">
               <div class="coupon" id="coupon1"><a class="coupon-btn"><img src="./img/coupon-mob-btn.svg" alt=""></a>

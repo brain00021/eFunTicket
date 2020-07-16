@@ -79,7 +79,7 @@ nav.header {
     }
     #menu-toggle {
       display: none;
-      &:checked {
+      &[checked='checked']] {
         & ~ .nav-links {
           right: 0;
           // top: 50px;
