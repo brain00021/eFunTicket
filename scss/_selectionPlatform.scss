@@ -215,6 +215,10 @@
       @include size(100%,100%);
       background:url('../img/platform-role1-card.png') no-repeat center center;
       background-size:100%;
+      @include pad {
+        background:url('../img/platform-role1-pad-card.png') no-repeat center center;
+        background-size:100%;
+      }
     }
     .role-detial-bg{
       background-color:#9dcd9a;
@@ -267,6 +271,10 @@
     @include size(100%,100%);
     background:url('../img/platform-role2-card.png') no-repeat center center;
     background-size:100%;
+    @include pad {
+      background:url('../img/platform-role2-pad-card.png') no-repeat center center;
+      background-size:100%;
+    }
   }
   h3{
     background:#b9711b;
@@ -307,6 +315,10 @@
     @include size(100%,100%);
     background:url('../img/platform-role3-card.png') no-repeat center center;
     background-size:100%;
+    @include pad {
+      background:url('../img/platform-role3-pad-card.png') no-repeat center center;
+      background-size:100%;
+    }
   }
   @include web{
     &:hover{
