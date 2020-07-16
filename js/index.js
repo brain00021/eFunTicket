@@ -1,17 +1,22 @@
 $(function() {
   function tabSetting(e) {
     e.stopPropagation();
-    e.preventDefault();
+    // e.preventDefault();
     let showContent = this.getAttribute('data-selection');
     // $("#"+showContent).find("#"+showContent+"-title").removeClass("animate__animated animate__bounceInDown");
     $("#"+showContent).find("#"+showContent+"-title").addClass("animate__animated animate__bounceInDown");
     let offset = $("#"+showContent).offset();
     $("html, body").animate({ scrollTop: offset.top-50 }, 1000);
+    // debugger;
+    // $("#menu-toogle").attr("checked",false);
+    // $('#menu-toggle').attr('checked',false)
   }
   $(document).on('click', '.nav-links a,#scrollDownBtn', tabSetting);
   //reset 
   $('body').css('overflow', 'auto');
   $(".dialog-bg").fadeOut();
+  //checksetting
+  // $('#menu-toggle').attr('checked',true)
   //dialog 設定
   $(document).on('click', '.dailog-btn,.dialog-bg',function(){
     $('body').css('overflow', 'auto');
@@ -49,7 +54,7 @@ isWeixinApp = ua.match(/MicroMessenger/i) == "micromessenger"; // 微信內建�
     //   return title1Pos,title2Pos,title3Pos,footerPos;
     // })
     if(isLineApp && isFbApp && isWeixinApp){
-      if(windowWidth < $(window).innerWidth()-100 || windowHeight < $(window).innerHeight() -100 || (windowWidth > $(window).innerWidth()+100 || windowHeight > $(window).innerHeight() +100  ) {
+      if(windowWidth < $(window).innerWidth()-100 || windowHeight < $(window).innerHeight() -100 || windowWidth > $(window).innerWidth()+100 || windowHeight > $(window).innerHeight() +100  ) {
         location.reload();
         return;
       }
