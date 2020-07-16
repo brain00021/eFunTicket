@@ -67,6 +67,7 @@ $(function() {
    
   // })
   $(document).on('click','.role',function(){
+    $(this).removeClass("animate__animated animate__bounceIn")
     $(this).addClass('animate__animated animate__bounce')
     let vm = this;
     let time;
