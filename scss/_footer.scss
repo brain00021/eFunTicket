@@ -72,6 +72,10 @@ footer{
   position: relative;
   z-index: 20;
   font-family: 'Microsoft JhengHei';
+  img{width:12px;
+    filter:invert(1);
+    margin-right:10px;
+  height:12px;}
   .selection1{
     background-color:#d70c18;
     color:#fff;
@@ -81,13 +85,14 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    p{color:#fff !important;}
     @include pad {
       width:100%;
       span{display:none;}
     }
   }
   .selection2{
-    background-color:#acacac;
+    background-color:#888888;
     width:20%;
     padding:15px;
     @include pad {

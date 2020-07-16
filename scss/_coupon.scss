@@ -131,6 +131,9 @@
   background:url('../img/ticket-1.png') no-repeat center center;
   background-size:100%;
   z-index: 5;
+  @include web{
+    margin-right:150px;
+  }
   &:hover{
     background:url('../img/ticket-1-hover.png') no-repeat center center;
     background-size:100%;

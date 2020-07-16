@@ -2,9 +2,11 @@
 .banner-bg-wrapper{
   background:url('../img/bg-banner-web.svg')  center 105% repeat-x;
   background-size: 2448px 807px;
+  background-size: 100%;
   position: relative;
   padding-top:10px;
   overflow: hidden;
+
   @include pad {
     background: url('../img/bg-banner-pad.svg') center 100% repeat-x;
     background-size: 1526px 493px;
@@ -118,16 +120,22 @@
   margin:auto;
   top:0px;
   z-index: 5;
+  background: url('../img/slogan2.png') no-repeat center center;
+  background-size: 100%;
   animation: flyingbird 5s infinite ease-in-out;
   @include pad {
     width:734px;
     height:83px;
+    top:30px;
+    background: url('../img/slogan2-mob.png') no-repeat center center;
+    background-size:100%;
   }
   @include mobile {
-    width:530px;
-    height: 60px;
-    left:-20%;
-    top:20px;
+    width:378px;
+    height: 41px;
+    margin:auto;
+    // left:-20%;
+    
   }
   img{width:100%;}
 }

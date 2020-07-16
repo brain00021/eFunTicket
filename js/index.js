@@ -83,6 +83,7 @@ $(function() {
     let title2Pos = title2.offset().top;
     let title3Pos = title3.offset().top;
     let footerPos = footer.offset().top;
+    let selectionPlatform = $("#selectionPlatform-description").offset().top;
 
     checkTitleClass(windowScreen,title1,title1Pos,title2Pos);
     checkTitleClass(windowScreen,title2,title2Pos,title3Pos);
@@ -106,6 +107,21 @@ $(function() {
       $('#coupon2').removeClass("animate__animated animate__fadeInRight")
       $('#coupon1').addClass("animate__animated animate__fadeOutLeft")
       $('#coupon2').addClass("animate__animated animate__fadeOutRight")
+    }
+
+    if(windowScreen >= selectionPlatform ){
+        for(let i = 1; i <= 3; i++){
+          setTimeout(function(){
+            $("#role" + i).removeClass("animate__animated animate__bounceOut")
+              $("#role" + i).addClass("animate__animated animate__bounceIn")
+            }
+          ,400 * i);
+        }
+    }else{
+      for(let i = 1; i <= 3; i++){
+        $("#role" + i).removeClass("animate__animated animate__bounceIn")
+        $("#role"+i).addClass("animate__animated animate__bounceOut")
+      }
     }
     // console.log(window);
   })

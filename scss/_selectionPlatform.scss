@@ -180,8 +180,14 @@
     text-align:center;
     color:#fff;
     margin-top:15px;
+    position: absolute;
     text-decoration:none;
-    text-shadow: -1px 0 #b9711b, 0 1px #b9711b, 1px 0 #b9711b, 0 -1px #b9711b;
+    @include size(150px,50px);
+    margin:auto;
+    bottom:15px;
+    right:0;
+    left:0;
+    // text-shadow: -1px 0 #b9711b, 0 1px #b9711b, 1px 0 #b9711b, 0 -1px #b9711b;
   }
 
 }
@@ -237,19 +243,21 @@
 
 #role2{
   position: relative;
-  &:hover{
-    .role-detail-front{
-      background:url('../img/platform-role2-card-hover.png') no-repeat center center;
-      background-size:100%;
-    }
-    .role-bg{
-      @include size(334px,268px);
-      background:url('../img/selection-platform-role2-hover.svg') no-repeat center center;
-      background-size: 100%;
-      bottom:11px;
-    }
-    .role-card{
-      top:0;
+  @include web{
+    &:hover{
+      .role-detail-front{
+        background:url('../img/platform-role2-card-hover.png') no-repeat center center;
+        background-size:100%;
+      }
+      .role-bg{
+        @include size(334px,268px);
+        background:url('../img/selection-platform-role2-hover.svg') no-repeat center center;
+        background-size: 100%;
+        bottom:11px;
+      }
+      .role-card{
+        top:0;
+      }
     }
   }
   .role-detail-front{
@@ -264,7 +272,7 @@
     background:#b9711b;
   }
   .role-card{
-    background-color:#f3ab55;
+    // background-color:#f3ab55;
     // left:106px;
     width: 320px;
     height: 200px;
@@ -300,27 +308,29 @@
     background:url('../img/platform-role3-card.png') no-repeat center center;
     background-size:100%;
   }
-  &:hover{
-    .role-detail-front{
-      background:url('../img/platform-role3-card-hover.png') no-repeat center center;
-      background-size:100%;
-    }
-    .role-bg{
-      @include size(275px,337px);
-      background:url('../img/selection-platform-role3-hover.svg') no-repeat center center;
-      background-size: 100%;
-      bottom:11px;
-      margin-bottom:-11px;
-    }
-    .role-card{
-      top:0;
+  @include web{
+    &:hover{
+      .role-detail-front{
+        background:url('../img/platform-role3-card-hover.png') no-repeat center center;
+        background-size:100%;
+      }
+      .role-bg{
+        @include size(275px,337px);
+        background:url('../img/selection-platform-role3-hover.svg') no-repeat center center;
+        background-size: 100%;
+        bottom:11px;
+        margin-bottom:-11px;
+      }
+      .role-card{
+        top:0;
+      }
     }
   }
   h3{
     background:#bc454c;
   }
   .role-card{
-    background-color:#fa7880;
+    // background-color:#fa7880;
     // left:106px;
     width: 320px;
     height: 200px;
@@ -346,7 +356,7 @@
   }
   a{
 
-    text-shadow: -1px 0 #bc454c, 0 1px #bc454c, 1px 0 #bc454c, 0 -1px #bc454c;
+    // text-shadow: -1px 0 #bc454c, 0 1px #bc454c, 1px 0 #bc454c, 0 -1px #bc454c;
   }
 }
 
@@ -357,26 +367,49 @@
   top:0;
   right:0;
   animation: bird 4s linear infinite;
+  @include pad {
+    @include size(113px,59px);
+    background: url('../img/bird-1.svg') no-repeat center center;
+    background-size: 100%;
+    top:180px;
+    left:15px;
+    animation: bird 4s linear infinite;
+  }
+  @include mobile {
+    @include size(80px,59px);
+    background: url('../img/bird-1.svg') no-repeat center center;
+    background-size: 100%;
+    margin:auto;
+    top:208px;
+    left:-300px;
+    bottom:0;
+  }
 }
 
 @keyframes bird {
   0%{
     background: url('../img/bird-1.svg') no-repeat center center;
+    background-size: 100%;
   }
   4%{
     background: url('../img/bird-2.svg') no-repeat center center;
+    background-size: 100%;
   }
   8%{
     background: url('../img/bird-1.svg') no-repeat center center;
+    background-size: 100%;
   }
   12%{
     background: url('../img/bird-2.svg') no-repeat center center;
+    background-size: 100%;
   }
   13%{
     background: url('../img/bird-1.svg') no-repeat center center;
+    background-size: 100%;
   }
   100%{
     background: url('../img/bird-1.svg') no-repeat center center;
+    background-size: 100%;
   }
 
 }

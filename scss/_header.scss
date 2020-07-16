@@ -64,11 +64,11 @@ nav.header {
         padding: 0;
       }
       a {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: normal;
         letter-spacing: 0.4px;
         color: #fff;
-        padding: 0 12px;
+        padding: 0 15px;
         @include pad {
           width:50%;
           color: #000;
@@ -79,7 +79,7 @@ nav.header {
     }
     #menu-toggle {
       display: none;
-      &[checked='checked']] {
+      &:checked {
         & ~ .nav-links {
           right: 0;
           // top: 50px;
