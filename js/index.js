@@ -33,6 +33,13 @@ $(function() {
   // const coupon2 = $("#coupon1").offset().top;
   var windowWidth = $(window).innerWidth();
   var windowHeight = $(window).innerHeight();
+// 內建瀏覽器設定
+var u = navigator.userAgent,
+ua = navigator.userAgent.toLowerCase(),
+isLineApp = u.indexOf("Line") > -1, // Line 內建瀏覽器
+isFbApp = u.indexOf("FBAV") > -1, // FB App 內建瀏覽器
+isWeixinApp = ua.match(/MicroMessenger/i) == "micromessenger"; // 微信內建瀏覽器
+
   $(window).resize(function(){
     // $(window).scrollTop(0,function(){
     //   title1Pos = title1.offset().top;
@@ -41,10 +48,18 @@ $(function() {
     //   footerPos = footer.offset().top;
     //   return title1Pos,title2Pos,title3Pos,footerPos;
     // })
+    if(isLineApp && isFbApp && isWeixinApp){
+      if(windowWidth < $(window).innerWidth()-100 || windowHeight < $(window).innerHeight() -100 || (windowWidth > $(window).innerWidth()+100 || windowHeight > $(window).innerHeight() +100  ) {
+        location.reload();
+        return;
+      }
+      return;
+    }
     if(windowWidth != $(window).innerWidth() || windowHeight != $(window).innerHeight()) {
       location.reload();
       return;
     }
+
     // location.reload();
     // return title1Pos,title2Pos,title3Pos,footerPos;
    
