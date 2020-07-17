@@ -67,8 +67,10 @@ $(function() {
    
   // })
   $(document).on('click','.role',function(){
+    if(this.id ==="role1") return;
     $(this).removeClass("animate__animated animate__bounceIn")
     $(this).addClass('animate__animated animate__bounce')
+  
     let vm = this;
     let time;
     time = setTimeout(function(){
