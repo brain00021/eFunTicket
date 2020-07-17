@@ -112,11 +112,16 @@ $(function() {
 
     if(windowScreen >= selectionPlatform ){
         for(let i = 1; i <= 3; i++){
+          $("#role" + i).removeClass("animate__animated animate__bounceOut")
+          
+          addClass(i);
+        }
+
+        function addClass(i){
           setTimeout(function(){
-            $("#role" + i).removeClass("animate__animated animate__bounceOut")
-              $("#role" + i).addClass("animate__animated animate__bounceIn")
-            }
-          ,400 * i);
+            $("#role" + i).addClass("animate__animated animate__bounceIn")
+            console.log(i);
+          },400*i);
         }
     }else{
       for(let i = 1; i <= 3; i++){
@@ -126,6 +131,12 @@ $(function() {
     }
     // console.log(window);
   })
+
+  for(let i = 1; i <= 3; i++){
+    $("#role" + i).removeClass("animate__animated animate__bounceIn")
+    $("#role"+i).addClass("animate__animated animate__bounceOut")
+  }
+
   function checkTitleClass(window,title,titlePos,endTitlePos){
       // console.log(window,titlePos,'window位置','div位置');
     if(window > (titlePos -200)){

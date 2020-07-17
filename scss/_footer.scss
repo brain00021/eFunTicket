@@ -72,10 +72,7 @@ footer{
   position: relative;
   z-index: 20;
   font-family: 'Microsoft JhengHei';
-  img{width:12px;
-    filter:invert(1);
-    margin-right:10px;
-  height:12px;}
+
   .selection1{
     background-color:#d70c18;
     color:#fff;
@@ -85,6 +82,10 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    img{width:12px;
+      // filter:invert(1);
+      margin-right:10px;
+    height:12px;}
     p{color:#fff !important;}
     @include pad {
       width:100%;

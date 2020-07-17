@@ -44,6 +44,9 @@
   padding-left:100px;
   padding-right:30px;
   margin:20px auto;
+  @media screen and (max-width:1600px){
+    width:490px;
+  }
   @include mobile{
     @include size(360px,210px);
     padding-left: 70px;;
@@ -64,6 +67,9 @@
     .icon-wrapper .icon .icon-more{
       opacity: 1;
       right:-100px;
+      @media screen and (max-width:1600px){
+        right:-70px;
+      }
       @include mobile{
         display: none;
       }
@@ -121,6 +127,9 @@
       z-index: 50;
       transition: all 0.5s ease;
       opacity: 0;
+      @media screen and (max-width:1600px){
+        @include size(118px,100px);
+      }
       img{
         width:100%;
       }

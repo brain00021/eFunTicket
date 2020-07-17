@@ -57,7 +57,9 @@
 }
 #selectionDetail-description-bg{
   position: absolute;
+  margin:auto;
   top:0;
+  right:-7%;
   width:1388px;
   height:447px;
   background:url("../img/selection-detail-description-bg.svg") no-repeat center center;
@@ -65,11 +67,13 @@
     background:url("../img/selection-detail-description-pad-bg.svg") no-repeat center center;
     width:900px;
     height:420px;
+
     background-size:900px 484px;
   }
   @include mobile {
     width:375px;
     height:470px;
+    right:0;
     background:url("../img/selection-detail-description-mob-bg.svg") no-repeat center center;
   }
   img{width:100%}
