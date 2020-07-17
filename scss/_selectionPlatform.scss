@@ -65,19 +65,7 @@
     align-items: center;
   }
 }
-@include mobile {
-  .role:after{
-    content:'';
-    display:block;
-    position: absolute;
-    background:url('../img/selection-platform-stamp.svg') no-repeat center center;
-    background-size: 100%;
-    @include size(375px,120px);
-    bottom: 0;
-    // transform: translateX(25%);
-    left:-25%;
-  }
-}
+
 
 .selectionPlatform-stamp{
   @include size(1226px,260px);
@@ -198,6 +186,19 @@
 }
 .role{
   cursor: pointer;
+  @include mobile {
+    &:after{
+      content:'';
+      display:block;
+      position: absolute;
+      background:url('../img/selection-platform-stamp.svg') no-repeat center center;
+      background-size: 100%;
+      @include size(375px,120px);
+      bottom: 0;
+      // transform: translateX(25%);
+      left:-25%;
+    }
+  }
 }
 #role1{
   position: relative;

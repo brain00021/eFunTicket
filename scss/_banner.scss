@@ -13,7 +13,7 @@
   }
   @include mobile {
     background:url('../img/bg-banner-mob.svg')  50% 130% repeat-x;
-    background-size: 100%;
+    // background-size: 375px 189px;
   }
   // padding:inherit;
   .flag{
@@ -176,14 +176,14 @@
   @include pad {
     width: 768px;
     height:291px;
-    bottom: 80px;
+    bottom: 40px;
     left: 0px;
   }
   @include mobile {
     width: 690px;
     height:262px;
     left:-50%;
-    bottom: 80px;
+    bottom: 70px;
   }
 }
 .conern-dancefan{

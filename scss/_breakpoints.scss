@@ -1,6 +1,6 @@
 //breakpoint
 @mixin web {
-  @media (min-width: 1200px) {
+  @media (min-width: 1366px) {
     @content;
   }
 }
