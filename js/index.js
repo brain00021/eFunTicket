@@ -122,7 +122,7 @@ $(function() {
         function addClass(i){
           setTimeout(function(){
             $("#role" + i).addClass("animate__animated animate__bounceIn")
-            console.log(i);
+            // console.log(i);
           },400*i);
         }
     }else{
