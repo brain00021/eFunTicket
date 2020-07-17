@@ -9,11 +9,11 @@
 
   @include pad {
     background: url('../img/bg-banner-pad.svg') center 100% repeat-x;
-    background-size: 1526px 493px;
+    background-size: 100%;
   }
   @include mobile {
     background:url('../img/bg-banner-mob.svg')  50% 130% repeat-x;
-    background-size:981px 481px;
+    background-size: 100%;
   }
   // padding:inherit;
   .flag{
