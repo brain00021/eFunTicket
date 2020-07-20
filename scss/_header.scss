@@ -40,6 +40,7 @@ nav.header {
         font-size: 20px;
         letter-spacing: 2.5px;
         color: #ffffff;
+        white-space: nowrap;
         @include mobile{
           display: none;
         }

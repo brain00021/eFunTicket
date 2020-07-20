@@ -66,8 +66,12 @@ $(function() {
   //   // return title1Pos,title2Pos,title3Pos,footerPos;
    
   // })
+  $(document).on('click','.role-link',function(event){
+    event.stopPropagation();
+  })
   $(document).on('click','.role',function(){
     if(this.id ==="role1") return;
+    // debugger;
     $(this).removeClass("animate__animated animate__bounceIn")
     $(this).addClass('animate__animated animate__bounce')
   
@@ -76,7 +80,7 @@ $(function() {
     time = setTimeout(function(){
       $(vm).removeClass('animate__animated animate__bounce')
     },1000)
-    time();
+    // time();
     clearTimeout(time)
   })
   $(window).on('scroll', function(){
